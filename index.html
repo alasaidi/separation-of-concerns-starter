@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./client/public/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List</title>
 
-    <link href="./client/styles/index.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header>
-      <h1>To-Do List</h1>
-    </header>
-    <main>
-      <div id="root">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./client/public/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+
+  <link href="./client/styles/index.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>To-Do List</h1>
+  </header>
+  <main>
+    <div id="root">
+
+      <section id="add-container" class="add-container">
+        <input type="text" placeholder="Write something here..." autofocus />
+        <button type="button">Add</button>
+      </section>
+      <section id="list-container" class="list-container">
         <template>
-          <section id="add-container" class="add-container">
-            <input
-              type="text"
-              placeholder="Write something here..."
-              autofocus
-            />
-            <button type="button">Add</button>
-          </section>
-          <section id="list-container" class="list-container">
-            <div class="list-item">
-              <input type="checkbox" aria-label="checkbox" />
-              <span>Lean DOM</span>
-              <button type="button">Delete</button>
-            </div>
-            <div class="list-item">
-              <input type="checkbox" aria-label="checkbox" />
-              <span>Lean Javascript</span>
-              <button type="button">Delete</button>
-            </div>
-            <div class="list-item">
-              <input type="checkbox" aria-label="checkbox" checked />
-              <span class="line-through">Lean CSS</span>
-              <button type="button">Delete</button>
-            </div>
-            <div class="list-item">
-              <input type="checkbox" aria-label="checkbox" checked />
-              <span class="line-through">Lean HTML</span>
-              <button type="button">Delete</button>
-            </div>
-          </section>
+          <div class="list-item">
+            <input type="checkbox" aria-label="checkbox" />
+            <span>Lean DOM</span>
+            <button type="button">Delete</button>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" aria-label="checkbox" />
+            <span>Lean Javascript</span>
+            <button type="button">Delete</button>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" aria-label="checkbox" checked />
+            <span class="line-through">Lean CSS</span>
+            <button type="button">Delete</button>
+          </div>
+          <div class="list-item">
+            <input type="checkbox" aria-label="checkbox" checked />
+            <span class="line-through">Lean HTML</span>
+            <button type="button">Delete</button>
+          </div>
         </template>
-      </div>
-    </main>
+      </section>
 
-    <script type="module" src="./client/src/init.js"></script>
-  </body>
+    </div>
+  </main>
+
+  <script type="module" src="./client/src/init.js"></script>
+</body>
+
 </html>
